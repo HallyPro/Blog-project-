@@ -70,25 +70,25 @@ Queries
         likes
       
         postDate 
-     }
+          }
   
-    }
+        }
   
  * Getting your user data
   
-      myAccount(userID: id, password ) {
+         myAccount(userID: id, password ) {
     
           id
        
           name 
        
-        }
+           }
 
 Mutations
 
  * Creating new user
   
-      addUser(id: userID, name: userName, password) {
+         addUser(id: userID, name: userName, password) {
     
           id,
     
@@ -98,13 +98,13 @@ Mutations
     
  * send comment
   
-      addComment (topic: specificBlogID, userID: senderID, text: comment) {
+         addComment (topic: specificBlogID, userID: senderID, text: comment) {
     
           userID,
     
           text   /* response
     
-        }
+          }
     
     
 Validation 
