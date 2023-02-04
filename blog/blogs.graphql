@@ -1,0 +1,35 @@
+type Query {
+    blogs: [Blog],
+    userBlog(id: ID!): Blog
+    myAccount (userID : ID!, password: String!): User 
+}
+
+type Mutation {
+    addComment(topic: ID!, userID:ID!, text: String!): Comment
+    addUser(id: ID!, name: String!, password: String!): User 
+}
+
+type Blog {
+    user: User!
+    content: [Content]
+}
+
+type User {
+    id: ID!
+    name: String!
+    password: String!
+}
+
+type Content {
+    topic: ID!
+    post : String
+    comment: [Comment]
+    views: Int
+    likes: Int
+    postDate: String!
+}
+
+type Comment {
+    userID: ID!
+    text: String!
+}
